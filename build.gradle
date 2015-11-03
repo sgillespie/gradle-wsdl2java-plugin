@@ -1,11 +1,12 @@
-
 plugins {
   id "com.github.kt3k.coveralls" version "2.4.0x"
 }
 
-apply plugin: 'groovy'
-apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: 'eclipse'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'jacoco'
 
 jacocoTestReport {
     reports {
