@@ -7,6 +7,7 @@ apply plugin: 'eclipse'
 apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'jacoco'
+apply plugin: 'java-gradle-plugin'
 
 jacocoTestReport {
     reports {
@@ -20,6 +21,9 @@ repositories {
 }
 
 dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.4'
+    testCompile gradleTestKit()
     testCompile 'junit:junit:4.12'
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
 }
 
